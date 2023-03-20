@@ -1,7 +1,6 @@
 import re
 import json
 import textwrap
-from os import path #FIXME Временное решения
 
 import telegram.ext
 import requests
@@ -72,7 +71,7 @@ def show_rebus(bot, chat_id, current_rebus, description=''):
         [['❓ Получить подсказку'], ['✖ Закончить игру']],
         one_time_keyboard=False, row_width=1, resize_keyboard=True
     )
-    
+
     if requests.get(current_rebus.image.url).ok:
         # for production server
         bot.send_photo(
@@ -215,7 +214,7 @@ def show_end_poll_message(bot, chat_id):
 
 
 def read_poll_questions():
-    with open('questions_to_clients.txt', 'r') as file_handler:
+    with open('questions_to_clients.txt', 'r', encoding='utf-8') as file_handler:
         poll_questions = json.load(file_handler)
     return poll_questions
 
