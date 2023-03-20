@@ -1,3 +1,17 @@
+# Ответы на вопросы задания
+
+> Что значит [::1] в ALLOWED_HOSTS?
+
+>> Используется для IPv6 в качестве локального хоста. Альтернатива 127.0.0.1 в IPv4
+
+> Что такое settings.MIDDLEWARE.
+
+>> Строка, которая помогает обмену запросами
+
+> что делает вот этот код? `'debug_toolbar.middleware.DebugToolbarMiddleware'`
+
+>>
+
 # Highload Bot
 
 Техническое задание читать [здесь](https://gist.github.com/dvmn-tasks/7e002681fd9dc0f0da5c1907b240c053).
